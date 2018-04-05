@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OpenidClient</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div>
+    <% if user_signed_in? %>
+      <%= link_to "logout", sign_out_path, method: :delete %>
+    <% else %>
+      <%= link_to "login", user_openid_connect_omniauth_authorize_path %>
+    <% end %>
+  <div>
+
+<%= yield %>
+
+</body>
+</html>
