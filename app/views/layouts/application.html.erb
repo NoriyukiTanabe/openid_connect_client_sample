@@ -9,6 +9,7 @@
 <body>
 
   <div>
+    <%= debug flash %>
     <% if user_signed_in? %>
       <%= link_to "logout", sign_out_path, method: :delete %>
     <% else %>

@@ -1,3 +1,4 @@
-this is page
+this is secure page
 <br />
-uid: <%= current_user.uid %>
+<h2>User Info</h2>
+<%= debug JSON.parse current_user.info %>
